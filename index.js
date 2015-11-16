@@ -19,9 +19,9 @@ var mainWindow = null;
 
 // 全てのウィンドウが閉じたら終了
 app.on('window-all-closed', function() {  
-  if (process.platform != 'darwin') {
+  // if (process.platform != 'darwin') {
     app.quit();
-  }
+  // }
 });
 
 // Electronの初期化完了後に実行
