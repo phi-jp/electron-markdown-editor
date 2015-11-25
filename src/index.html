@@ -1,0 +1,20 @@
+<!doctype html>
+
+<html>  
+  <head>
+    <meta charset='utf-8' />
+    <title>Markdown Editor</title>
+    <link rel='stylesheet' href='styles/style.css' />
+  </head>
+  <body>
+    <div id='app'>
+      <textarea id='input' v-model='input' debounce='100'></textarea>
+      <div id='output' v-html='input | marked'></div>
+    </div>
+  </body>
+
+  <!-- user -->
+  <script src='scripts/file.js'></script>
+  <script src='scripts/menu.js'></script>
+  <script src='scripts/main.js'></script>
+</html>

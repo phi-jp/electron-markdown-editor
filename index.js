@@ -9,7 +9,7 @@ var app = require('app');
 // ウィンドウを作成するモジュール
 var BrowserWindow = require('browser-window');  
 // 起動 URL
-var currentURL = 'file://' + __dirname + '/index.html';
+var currentURL = 'file://' + __dirname + '/src/index.html';
 
 // クラッシュレポート
 require('crash-reporter').start();
