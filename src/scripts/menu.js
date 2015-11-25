@@ -1,5 +1,4 @@
 var remote = require('remote');
-var Dialog = remote.require("dialog");
 var Menu = remote.require('menu');
 
 var menu = Menu.buildFromTemplate([
@@ -12,26 +11,14 @@ var menu = Menu.buildFromTemplate([
       {
         label: 'Open',
         click: function() {
-          Dialog.showOpenDialog(function(filenames) {
-            if (!filenames) return ;
-            File.open(filenames[0]);
-          });
+          Menu.open && Menu.open();
         },
       },
       {
         label: 'Save',
         accelerator: "CmdOrCtrl+S",
         click: function() {
-          if (File.lasted) {
-            File.save(File.lasted, app.$data.input);
-          }
-          else {
-            Dialog.showSaveDialog(function(filename) {
-              if (filename) {
-                File.save(filename, app.$data.input);
-              }
-            });
-          }
+          Menu.save && Menu.save();
         },
       },
     ],
